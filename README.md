@@ -22,4 +22,4 @@ or go to the test folder and run
 $ python -m unittest -v test.py
 ```
 
-## [Docs]((https://riccap.github.io/sales-taxes-solution))
+## [Docs](https://riccap.github.io/sales-taxes-solution)

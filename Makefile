@@ -14,8 +14,8 @@ help:
 .SILENT: tests
 
 docs:
-	$(SILENT)sphinx-apidoc -f -o doc/ src/
-	$(SILENT)cd doc && $(MAKE) html
+	$(SILENT)sphinx-apidoc -f -o docs/ src/
+	$(SILENT)cd docs && $(MAKE) html
 
 tests:
 	$(SILENT)echo ">>> Running tests..."
