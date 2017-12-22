@@ -46,7 +46,7 @@ class PriceUpdater():
                 with open(file) as input:
                     with open('output-' + file, 'w+') as out:
 
-                        print('\nParsing file' + file)
+                        print('Parsing file' + file)
 
                         total_sales_taxes = 0.
                         total_price = 0.
@@ -80,7 +80,7 @@ class PriceUpdater():
                         out.write('ToTal: {:.2f}\n'.format(total_price))
 
             except FileNotFoundError:
-                print('\nFile ' + file + ' not found')
+                print('File ' + file + ' not found')
 
     def _update_price(self, item_name, item_price):
         """Update the item price according to the item category
