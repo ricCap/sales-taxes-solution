@@ -79,7 +79,7 @@ class PriceUpdater():
 
             # Try to open the file
             try:
-                with open(file) as input:
+                with open(file) as input_file:
                     with open('output-' + file, 'w+') as out:
 
                         # TODO we may add a logger for these information
@@ -89,7 +89,7 @@ class PriceUpdater():
                         total_price = 0.
 
                         # Get the next item
-                        for line in input:
+                        for line in input_file:
 
                             # Parse it
                             item = self._INPUT_PATTERN.search(line)
@@ -157,7 +157,7 @@ class PriceUpdater():
 
         Note:
             This method is very simple: it matches whole words agains a list of
-            known items; more rubust implementations can be provided using e.g.
+            known items; more robust implementations can be provided using e.g.
             string similarity algorithms along with a database or some
             previously trained supervised machine learning algorithms.
 

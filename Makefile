@@ -19,7 +19,7 @@ doc:
 
 tests:
 	$(SILENT)echo ">>> Running tests..."
-	$(SILENT)cd test && python -m unittest -v test.py
+	$(SILENT)cd test && python -m unittest -b -v test.py
 	$(SILENT)echo ">>> Done!\n"
 
 format:
