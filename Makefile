@@ -13,7 +13,7 @@ help:
 
 .SILENT: tests
 
-docs:
+doc:
 	$(SILENT)sphinx-apidoc -f -o docs/ src/
 	$(SILENT)cd docs && $(MAKE) html
 
@@ -22,6 +22,13 @@ tests:
 	$(SILENT)cd test && python -m unittest -v test.py
 	$(SILENT)echo ">>> Done!\n"
 
+format:
+	$(SILENT)autopep8 -ia --experimental src/*.py 
+	$(SILENT)autopep8 -ia --experimental test/*.py 
+
+check_format:
+	$(SILENT)pep8 src/*.py
+	$(SILENT)pep8 src/*.py
 
 ### ===================== ###
 ###     Clean section     ###

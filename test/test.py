@@ -25,5 +25,6 @@ class TestPausesExtraction(unittest.TestCase):
             self.assertEqual(True, filecmp.cmp(
                 'expected-output-' + input, 'output-' + input))
 
+
 if __name__ == '__main__':
     unittest.main()

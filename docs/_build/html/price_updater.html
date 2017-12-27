@@ -51,8 +51,28 @@
 <p>A class that can apply taxes to your stock receipts</p>
 <dl class="docutils">
 <dt>Note:</dt>
-<dd>Input format: items should be formatted as follows
-(1[one or more spaces/tabs][one item_name of one or more words][one or more spaces/tabs]at[one or more spaces/tabs][price])</dd>
+<dd><dl class="first docutils">
+<dt>Input format: items should be formatted as follows.</dt>
+<dd><ul class="first last simple">
+<li>1[st+][one item_name of one or more words][st+]at[st+][price]</li>
+</ul>
+</dd>
+<dt>Legend:</dt>
+<dd><ul class="first last simple">
+<li>st+: one or more spaces/tabs</li>
+<li>price: a real number</li>
+</ul>
+</dd>
+<dt>Examples of valid item_names:</dt>
+<dd><ul class="first last simple">
+<li>1 book   at 15</li>
+<li>1 nice book          at 15.15</li>
+<li>1 imported thing at 13</li>
+</ul>
+</dd>
+</dl>
+<p class="last">Note: Imported items should include &#8216;imported&#8217; in the item_name.</p>
+</dd>
 </dl>
 <dl class="attribute">
 <dt id="price_updater.PriceUpdater.BASIC_EXCEMPTED_GOODS">
@@ -72,7 +92,19 @@
 <dl class="method">
 <dt id="price_updater.PriceUpdater.update_receipts">
 <code class="descname">update_receipts</code><span class="sig-paren">(</span><em>files: list</em><span class="sig-paren">)</span><a class="headerlink" href="#price_updater.PriceUpdater.update_receipts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the prices of the items contained in each file and print them to a file with name output-[nameOfTheInputFile]</p>
+<dd><p>Update the prices of the items contained in each file (.txt).</p>
+<p>The results are printed into a file called output-[nameOfTheInputFile]</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd><ul class="first last simple">
+<li>If the file is not found a message is printed to the console.</li>
+<li>Not recognized items will be signaled in the output file.</li>
+</ul>
+</dd>
+<dt>Raises:</dt>
+<dd>Exceptions may be raised due to read/write permissions. Make sure
+the script can write and create files in this folder.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
