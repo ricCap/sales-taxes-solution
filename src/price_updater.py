@@ -15,7 +15,7 @@ class PriceUpdater():
             + st+: one or more spaces/tabs
             + price: a real number
 
-        Examples of valid item_names:
+        Examples of valid items:
             + 1 book   at 15
             + 1 nice book          at 15.15
             + 1 imported thing at 13
@@ -59,6 +59,9 @@ class PriceUpdater():
         """Update the prices of the items contained in each file (.txt).
 
         The results are printed into a file called output-[nameOfTheInputFile]
+
+        Args:
+            fiels (list): a list of file names or paths with .txt extension
 
         Note:
             + If the file is not found a message is printed to the console.
@@ -119,7 +122,7 @@ class PriceUpdater():
                         # Print summary
                         out.write('Sales Taxes: {:.2f}\n'.format(
                             total_sales_taxes))
-                        out.write('ToTal: {:.2f}\n'.format(total_price))
+                        out.write('Total: {:.2f}\n'.format(total_price))
 
             except FileNotFoundError:
                 print('File ' + file + ' not found')

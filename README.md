@@ -14,6 +14,8 @@ the output files will be placed in the test dir.
 
 ## Test
 
+The solution has been tested against the inputs provided by the sales-taxes-problem.
+
 ```
 $ make tests
 ```
